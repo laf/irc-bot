@@ -4,6 +4,8 @@ module.exports = (robot) ->
   nick = process.env.HUBOT_IRC_NICK
   robot.respond /team/i, (msg) ->
     msg.send "blahdeblah, laf, f0o, Rosiak, SaaldjorMike, murrant"
+  robot.hear /create a feature request/i, (msg) ->
+    msg.send "You can create a feature request on the community site: https://t.libren.ms/hyz37"
   robot.hear /creat(e|ing) an issue/i, (msg) ->
     msg.send "You can create an issue on github: #{github}/issues"
   robot.hear /(poller|discovery) (.*)([ ]*)debug/i, (msg) ->
